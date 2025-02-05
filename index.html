@@ -201,12 +201,12 @@ function showInfo(el, text){
 }
 
 async function copyToClipboard(el){
-    //try {
+    try {
         await navigator.clipboard.writeText(el.value);
         showInfo(el, "Text copied");
-    //} catch (error) {
-    //    console.error(error.message);
-    //}
+    } catch (error) {
+        console.error(error);
+    }
 }
 </script>
 </body>
